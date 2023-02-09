@@ -1,0 +1,39 @@
+print('Annual and Monthly tax')
+def main():
+    #Calculation of Annual Income
+    monthly_income = float(input("Enter your Monthly Income: Php "))
+    annual_income = float(monthly_income) * 12
+    print("Your annual income is: Php", annual_income)
+
+    #Calculation of Annual and Monthly Tax using the table provided
+    if annual_income <= 250000:
+        tax = 0
+        print("Annual tax = Php", tax)
+        monthly = 0
+        print("Monthly Tax = Php", monthly)
+    elif annual_income > 250000 and annual_income <= 400000:
+        tax = float((annual_income - 250000) * .15)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+    elif annual_income > 400000 and annual_income <= 800000:
+        tax = float(((annual_income - 400000) * .20) + 22500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+    elif annual_income > 800000 and annual_income <= 2000000:
+        tax = float(((annual_income - 800000) * .25) + 102500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+    elif annual_income > 2000000 and annual_income <= 8000000:
+        tax = float(((annual_income - 2000000) * .30) + 402500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+    elif annual_income > 8000000:
+        tax = float(((annual_income - 8000000) * .35) + 2202500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+main()
