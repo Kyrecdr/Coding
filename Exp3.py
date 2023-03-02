@@ -16,7 +16,7 @@ while True:
     else:
         print("The number you guessed is too high, try again")
         
-    if count > 10:
+    if count > 9:
         print("You've reached the maximum number of guesses")
         print("The random number is", rnd)
         break;
